@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Timer estilo pomodoro" />
+
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/main.js" defer></script>
+
+    <title>FocusTimer - Pomodoro</title>
+  </head>
+  <body>
+    <div id="app">
+      <section id="display">
+        <div id="timer">
+          <span id="minutes">25</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </div>
+
+        <div id="controls">
+          <button class="ph-fill ph-play" data-action="toggleRunning">
+            <span class="sr-only">Iniciar contador</span>
+          </button>
+
+          <button class="ph-fill ph-pause" data-action="toggleRunning">
+            <span class="sr-only">Pausar contador</span>
+          </button>
+
+          <button class="ph-fill ph-stop" data-action="reset">
+            <span class="sr-only">Reiniciar contador</span>
+          </button>
+
+          <button class="ph-bold ph-plus" data-action="timerUp">
+            <span class="sr-only">Aumentar o tempo do contador</span>
+          </button>
+
+          <button class="ph-bold ph-minus" data-action="timerDown">
+            <span class="sr-only">Diminuir o tempo do contador</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="sounds">
+        <button
+          class="card ph ph-tree"
+          data-action="toggleMusic"
+          data-music="forest"
+          style="--background-card-secondary: #49a078"
+        >
+          <span class="sr-only">Iniciar sons de floresta</span>
+        </button>
+        <button
+          class="card ph ph-cloud-rain"
+          data-action="toggleMusic"
+          data-music="rain"
+          style="--background-card-secondary: #02799d"
+        >
+          <span class="sr-only">Iniciar sons de chuva</span>
+        </button>
+        <button
+          class="card ph ph-storefront"
+          data-action="toggleMusic"
+          data-music="coffeeShop"
+          style="--background-card-secondary: #7d4e57"
+        >
+          <span class="sr-only">Iniciar sons de cafeteria</span>
+        </button>
+        <button
+          class="card ph ph-fire"
+          data-action="toggleMusic"
+          data-music="fireplace"
+          style="--background-card-secondary: #d66853"
+        >
+          <span class="sr-only">Iniciar sons de lareira</span>
+        </button>
+      </section>
+    </div>
+  </body>
+</html>
